@@ -9,6 +9,7 @@ set JUPYTER_LAB_DIR=%USER_DIR%\JupyterLab
 set PYTHON_INSTALLER_PATH=%SCRIPT_DIR%files\python.exe
 set LOGO_PATH=%SCRIPT_DIR%files\logo.ico
 set GIT_INSTALLER_PATH=%SCRIPT_DIR%files\Git.exe
+set R_INSTALLER_PATH=%SCRIPT_DIR%files\R.exe
 
 python --version > nul 2>&1
 if %errorlevel% neq 0 (
@@ -30,7 +31,16 @@ if %errorlevel% neq 0 (
     echo Git is already installed.
 )
 
-
+:: Check and Install R
+R --version > nul 2>&1
+if %errorlevel% neq 0 (
+    echo R not found in PC!
+    echo Installing R...
+    start /wait %R_INSTALLER_PATH% /SILENT
+    echo R Installed!
+) else (
+    echo R is already installed.
+)
 
 
 mkdir "%USERPROFILE%\JupyterLab"
