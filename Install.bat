@@ -41,7 +41,7 @@ if %errorlevel% neq 0 (
 ) else (
     echo R is already installed.
 )
-
+setx PATH "C:\Program Files\R\R-4.5.0\bin\x64;%PATH%" 
 
 mkdir "%USERPROFILE%\JupyterLab"
 
