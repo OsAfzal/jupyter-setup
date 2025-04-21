@@ -6,7 +6,7 @@ set SCRIPT_DIR=%~dp0
 
 set USER_DIR=%USERPROFILE%
 set JUPYTER_LAB_DIR=%USER_DIR%\JupyterLab
-set PYTHON_INSTALLER_PATH=%SCRIPT_DIR%Data\python.exe
+set PYTHON_INSTALLER_PATH=%SCRIPT_DIR%files\python.exe
 set LOGO_PATH=%SCRIPT_DIR%files\logo.ico
 set GIT_INSTALLER_PATH=%SCRIPT_DIR%files\Git.exe
 
